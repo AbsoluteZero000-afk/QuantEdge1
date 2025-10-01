@@ -1,12 +1,17 @@
-# Byte-compiled / optimized / DLL files
+# Environment and secrets
+.env
+.env.local
+.env.production
+*.key
+*secret*
+*password*
+config/secrets.yml
+
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
-
-# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -24,61 +29,49 @@ wheels/
 .installed.cfg
 *.egg
 
-# Environments
-.env
-.venv
-env/
+# Virtual environments
+.venv/
 venv/
 ENV/
-env.bak/
-venv.bak/
+env/
 
-# QuantEdge specific ignores
-config.yaml
+# Data files (sensitive)
 *.db
-*.sqlite
 *.sqlite3
+data/private/
+logs/private/
+backups/
 
-# Data files
-data/
-*.csv
-*.parquet
-*.h5
-*.json
-backtest_results/
-market_data/
-
-# Logs
-logs/
-*.log
-*.log.*
-
-# IDE files
+# IDE
 .vscode/
 .idea/
-*.sublime-project
-*.sublime-workspace
+*.swp
+*.swo
+*~
 
-# OS files
+# OS
 .DS_Store
 .DS_Store?
 ._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# Docker
-.dockerignore
+# Trading specific
+trades.csv
+positions.csv
+account_history.csv
+performance_data/
+live_trading_logs/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
 
 # Streamlit
 .streamlit/secrets.toml
 
-# Testing
-.pytest_cache/
-test-results/
-coverage/
-
-# Security
-*.pem
-*.key
-*.crt
-secrets/
-credentials/
+# Logs
+*.log
+logs/

@@ -21,7 +21,7 @@ class QuantEdgeAlerter:
     
     def __init__(self):
         # Your specific Slack webhook
-        self.slack_webhook = "https://hooks.slack.com/services/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"
+        self.slack_webhook = "https://hooks.slack.com/services/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"
         
         # Backup webhook from .env (if you want to change it later)
         self.backup_webhook = os.getenv('SLACK_WEBHOOK_URL')
