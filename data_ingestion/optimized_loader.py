@@ -325,12 +325,12 @@ def main():
     db_url = os.getenv('DATABASE_URL')
     
     if not api_key:
-        print("❌ FMP_API_KEY not found in .env file")
+        print("❌ FMP_API_KEY not found in ..env file")
         print("   Get your free key at: https://financialmodelingprep.com")
         return
     
     if not db_url:
-        print("❌ DATABASE_URL not found in .env file")
+        print("❌ DATABASE_URL not found in ..env file")
         print("   Make sure PostgreSQL is running: docker-compose up -d postgres")
         return
     
